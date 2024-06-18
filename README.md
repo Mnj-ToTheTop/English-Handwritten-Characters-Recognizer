@@ -82,8 +82,17 @@ This layer contains two Conv2D() layer each with 64 Filters and a kernel size of
 LAYER - 3
 This layer is identical to Layer - 2 and results in an output size of 8x8x64.
 
-NOTE: I have used padding to avoid shrinking of the data.
-NOTE 2: The activation function used is ReLu
+`NOTE: I have used padding to avoid shrinking of the data.`
+`NOTE 2: The activation function used is ReLu`
+
+## STEP 5: Training and Testing the model
+The model was trained using the `model.fit()` function. 30 Epoches were used.
+On evaluating the model using the test set, and the function `model.evaluate()` we can see the model has an accuracy of 75.806%
+
+## IMPROVEMENTS THAT CAN BE MADE :
+1. A larger data set can be used to train the model more.
+2. A larger number of epoch can be used.
+3. Changes in the model can also be done to improve the model.
 
 Dataset Taken from:
 
