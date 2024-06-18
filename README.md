@@ -16,3 +16,5 @@ Dataset Taken from:
   month     = "February", <br />
   year      = "2009", <br />
 }
+
+Kaggel Link: https://www.kaggle.com/datasets/dhruvildave/english-handwritten-characters-dataset
