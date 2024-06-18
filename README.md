@@ -33,7 +33,7 @@ This layer contains two `Conv2D()` layer each with 64 Filters and a kernel size 
 ### *LAYER - 3*
 This layer is identical to Layer - 2 and results in an output size of `8x8x64`.
 
-`NOTE: I have used padding to avoid shrinking of the data.`
+`NOTE: I have used padding to avoid shrinking of the data.`<br/>
 `NOTE 2: The activation function used is Rectified Linear (ReLu)`
 
 ### CLASSIFICATION LAYERS:
