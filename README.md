@@ -48,43 +48,6 @@ Dropping 0.50 of the nuerons
 #### *DENSE LAYER - 2*
 Since we have 62 classes to classify, we have kept the the number of nuerons to `62`
 
-Dataset Taken from:
-
-@InProceedings {deCampos09,
-author = "de Campos, T.~E. and Babu, B.~R. and Varma, M.",
-title = "Character recognition in natural images",
-booktitle = "Proceedings of the International Conference on Computer
-Vision Theory and Applications, Lisbon, Portugal",
-month = "February",
-year = "2009",
-
-Looking at the data it can be noted that the first column contains the Image path while the 2nd contains the True Label of the image.
-
-I then created a Python list labels and filenames to store the image path of each image along with its corresponding label.
-
-STEP 2: Preprocessing
-To make sure all the images are of the same type and that all the images have the proper input size for our CNN, I used the imread() function of OpenCV library to read the image and the resize() function of the same to resize the image to the correct size.
-
-Then I converted both the labels list and filenames list to Numpy arrays. I also used the LabelEncoder from the scikit-learn library to encode the the labels to integers (as some of the labels are characters)
-
-STEP 3: Separating the Train set and Test set
-To split the dataset into train and test set, I have used the train_test_split() of the scikit-learn library. Once the the train set and test set were obtained, the labels were One-Hot-Encoded using the to_categorical() function of Keras.
-
-STEP 4: Model Building
-The model contains 3 Convolution Layers and Classification Layer.
-
-LAYER - 1
-This layer contains two Conv2D() layers one with 64 filters and the other with 32 filters, with the kernel size = 3 (i.e. 3x3). Following this, a Max Poooling layer is in place, which gives the output shape of 32x32x32.
-
-LAYER - 2
-This layer contains two Conv2D() layer each with 64 Filters and a kernel size of 3 (i.e. 3x3). This is followed by Max Pooling with a size of 2x2 which results in an output size of 8x8x64.
-
-LAYER - 3
-This layer is identical to Layer - 2 and results in an output size of 8x8x64.
-
-`NOTE: I have used padding to avoid shrinking of the data.`
-`NOTE 2: The activation function used is ReLu`
-
 ## STEP 5: Training and Testing the model
 The model was trained using the `model.fit()` function. 30 Epoches were used.
 On evaluating the model using the test set, and the function `model.evaluate()` we can see the model has an accuracy of 75.806%
